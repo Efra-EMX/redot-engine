@@ -44,6 +44,7 @@ class CollisionShape2D : public Node2D {
 	Rect2 rect = Rect2(-Point2(10, 10), Point2(20, 20));
 	uint32_t owner_id = 0;
 	CollisionObject2D *collision_object = nullptr;
+	bool enabled = true;
 	bool disabled = false;
 	bool one_way_collision = false;
 	real_t one_way_collision_margin = 1.0;
@@ -69,6 +70,9 @@ public:
 
 	void set_shape(const Ref<Shape2D> &p_shape);
 	Ref<Shape2D> get_shape() const;
+
+	void set_enabled(bool p_enabled);
+	bool is_enabled() const;
 
 	void set_disabled(bool p_disabled);
 	bool is_disabled() const;
