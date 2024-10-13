@@ -276,6 +276,10 @@ void CollisionShape2D::_validate_property(PropertyInfo &p_property) const {
 	}
 }
 
+void CollisionShape2D::_get_property_list(List<PropertyInfo> *p_list) const {
+	p_list->erase(PropertyInfo(Variant::BOOL, "disabled"));
+}
+
 void CollisionShape2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_shape", "shape"), &CollisionShape2D::set_shape);
 	ClassDB::bind_method(D_METHOD("get_shape"), &CollisionShape2D::get_shape);
