@@ -18,7 +18,12 @@
 			[b]Note:[/b] The default value is [member ProjectSettings.debug/shapes/collision/shape_color]. The [code]Color(0, 0, 0, 1)[/code] value documented here is a placeholder, and not the actual default debug color.
 		</member>
 		<member name="disabled" type="bool" setter="set_disabled" getter="is_disabled" default="false" keywords="enabled">
-			A disabled collision shape has no effect in the world. This property should be changed with [method Object.set_deferred].
+			If [code]true[/code], collision shape has no effect in the world. This property should be changed with [method Object.set_deferred].
+			[b]Note:[/b] This property is the opposite of [member enabled].
+		</member>
+		<member name="enabled" type="bool" setter="set_enabled" getter="is_enabled" default="false" keywords="enabled">
+			If [code]false[/code], collision shape has no effect in the world. This property should be changed with [method Object.set_deferred].
+			[b]Note:[/b] This property is the opposite of [member disabled].
 		</member>
 		<member name="one_way_collision" type="bool" setter="set_one_way_collision" getter="is_one_way_collision_enabled" default="false">
 			Sets whether this collision shape should only detect collision on one side (top or bottom).
